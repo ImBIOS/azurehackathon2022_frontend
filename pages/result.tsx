@@ -1,6 +1,7 @@
+import type { NextPage } from "next";
 import React from 'react'
 
-const ResultPage = () => {
+const ResultPage: NextPage = () => {
   return (
     <div>ResultPage</div>
   )

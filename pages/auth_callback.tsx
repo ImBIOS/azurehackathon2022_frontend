@@ -1,7 +1,8 @@
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
-const AuthCallbackPage = () => {
+const AuthCallbackPage: NextPage = () => {
   const router = useRouter();
   let authToken = "";
   if (typeof window !== "undefined") {

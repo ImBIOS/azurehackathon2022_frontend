@@ -1,10 +1,14 @@
 import axios from "axios";
+import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { BACKEND_URL } from "../constant";
 
-const InputUser = () => {
+const InputUser: NextPage = () => {
   const [students, setStudents] = useState();
-
+  if (typeof localStorage !== undefined) {
+    const token = localStorage.getItem("token");
+    console.log(token);
+  }
   useEffect(() => {
     axios
       .get(`${BACKEND_URL}/api/students?group=mipa`, {
